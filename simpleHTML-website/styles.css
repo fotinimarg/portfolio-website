@@ -1,0 +1,134 @@
+/*========== BASE ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*========== VARIABLES ==========*/
+:root {
+  --primary-color: #003e1f;
+  --secondary-color: #ef233c;
+  --bg-color: white;
+  --bg-color2: #73ba9b;
+  --font-color: #333;
+}
+
+/*========== GENERAL ==========*/
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+/*========== LAYOUT ==========*/
+main {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#reviews {
+  grid-column: span 3;
+  display: grid;
+  grid-template: 0.5fr 1.5fr / 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#reviews h2 {
+  grid-column: span 3;
+  text-align: center;
+}
+
+/*========== COMPONENTS ==========*/
+header,
+#footer {
+  background-color: var(--bg-color2);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+a:hover,
+a:focus {
+  color: var(--secondary-color);
+}
+
+nav li {
+  display: inline;
+  margin: 0 0.5rem;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  background-color: var(--secondary-color);
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid var(--secondary-color);
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+/*========== HOME ==========*/
+.bottom-header {
+  margin: 4rem 0;
+}
+
+/*========== FORM ==========*/
+form {
+  max-width: 480px;
+  background-color: var(--bg-color2);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+input,
+textarea {
+  padding: 0.6rem;
+  font: inherit;
+  border-radius: 0.5rem;
+  border: none;
+  resize: vertical;
+}
